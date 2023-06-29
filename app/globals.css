@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+.populated-link {
+  @apply hover:text-blue-500;
+}
+
+@layer base {
+  a {
+    @apply text-blue-500;
+  }
+}
+
+.navbar-container {
+  @apply w-screen bg-[#222];
+}
+
+.navbar {
+  @apply h-[3rem] leading-[3rem] flex flex-row text-white mx-auto items-center;
+  font-family: Roboto, Source Sans Pro, Calibri, Arial, sans-serif;
+  max-width: 1120px
+}
+
+.navbar-item-primary {
+  @apply text-white px-[16px] text-[1.3rem] cursor-pointer bg-[#2196f3] duration-[.3s] h-full flex items-center mr-auto;
+}
+
+.navbar-item-primary:hover {
+  @apply bg-[#0c7cd5];
+}
+
+.navbar-item {
+  @apply text-white px-[16px] text-[1.1rem] cursor-pointer h-full flex items-center duration-[.3s];
+}
+
+.navbar-item:hover {
+  @apply bg-[#090909];
+}
+
+.banner {
+  @apply py-16 bg-[#2196f3] w-full flex flex-col items-center;
+}
+
+.banner-logo {
+  -webkit-filter: drop-shadow(0 3px 4px #333);
+  filter: drop-shadow(0 3px 4px #333);
+  width: 95%;
+  max-width: 700px;
+}
+
+.banner-code-block {
+  @apply mx-auto rounded-[5px] bg-[#f5f5f5] text-[#111] p-4 mt-4;
+  font-family: Roboto Mono, Source Code Pro, Consolas, monospace;
+}
+
+.infos-container {
+  @apply grid grid-cols-1 md:grid-cols-2 w-full;
+  max-width: 1120px;
+  margin: 64px auto 0 auto;
+}
+
+.info {
+  @apply flex flex-col items-center justify-center p-[24px] gap-y-4;
+}
+
+.info-title {
+  @apply text-[2rem] font-semibold;
+}
+
+.info-contents {
+  @apply text-left mb-auto;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.info-list {
+  @apply list-disc list-inside mr-auto mb-auto;
+}
+
+.info-code-block {
+  @apply rounded-[5px] bg-[#f5f5f5] text-[#111] p-4 mt-4 mb-auto;
+  font-family: Roboto Mono, Source Code Pro, Consolas, monospace;
+}
+
+.docs-navbar-container {
+  @apply w-screen bg-[#333] flex flex-row justify-center;
+}
+
+.docs-navbar {
+  @apply w-full flex flex-row items-center p-4 text-[.9rem] text-[#aaa] gap-x-2;
+  max-width: 1120px;
+}
+
+.docs-navbar-select {
+  @apply bg-[#222] text-[#aaa] cursor-pointer p-1 rounded-md outline-0;
+}
+
+.docs-navbar-icon {
+  @apply ml-auto text-white cursor-pointer;
+}
+
+.docs-main-container {
+  @apply bg-[#fefefe];
+}
+
+.docs-main {
+  @apply mx-4 mt-6 flex flex-row;
+}
+
+.docs-sidebar {
+  @apply text-[#aaa] flex flex-col border-r-[1px] border-gray-200 px-4;
+  font-family: Roboto, Source Sans Pro, Calibri, Arial, sans-serif;
+}
+
+.docs-sidebar-header {
+  @apply flex flex-row text-xl justify-between mt-2 font-bold text-black;
+}
+
+.docs-sidebar-item {
+  @apply text-gray-600 cursor-pointer duration-100 ml-2 pl-2;
+}
+
+.docs-sidebar-item:hover {
+  @apply text-blue-400 border-l-2 border-blue-400;
+}
+
+.docs-sidebar-item-selected {
+  @apply bg-[#f4f4f4] border-l-2 border-blue-400;
+}
+
+.docs-contents {
+  @apply flex flex-col w-full px-8 mt-2 max-w-[1120px] mx-auto;
+}
+
+.docs-contents h1 {
+  @apply text-2xl font-bold;
+}
+
+.docs-contents h2 {
+  @apply text-lg font-bold;
+}
+
+.docs-contents-header {
+  @apply flex flex-row justify-between text-2xl items-center;
+}
+
+.docs-contents-subheader {
+  @apply flex flex-row;
+}
+
+.docs-contents-description {
+  @apply mt-2 mb-4;
+}
+
+.docs-contents-code-block {
+  @apply rounded-[5px] bg-[#f5f5f5] text-[#111] p-4 mt-4;
+}
+
+.docs-contents-table {
+  @apply border-collapse my-2;
+}
+
+.docs-contents-table th {
+  @apply bg-[#2196f3] uppercase p-4 text-white border-[1px] border-gray-200;
+}
+
+.docs-contents-table td {
+  @apply p-4 border-[1px] border-gray-200;
+}
+
+.docs-contents-list {
+  @apply list-disc list-inside mr-auto space-y-1 mt-1;
+}
+
+.docs-contents-shortlist-container {
+  @apply flex flex-row;
+}
+
+.docs-contents-shortlist {
+  @apply flex flex-col w-full;
+}
+
+.docs-contents-shortlist-item {
+  @apply cursor-pointer ml-1 pl-2 border-l-2 border-gray-200 duration-100 block;
+}
+
+.docs-contents-shortlist-item:hover {
+  @apply border-blue-400 bg-[#f4f4f4];
+}
+
+.docs-contents-detailed-list {
+  @apply flex flex-col w-full;
+}
+
+.docs-contents-detailed-list-item {
+  @apply flex flex-col mb-4 border-l-2 border-gray-200 pl-2 duration-100 py-2;
+}
+
+.docs-contents-detailed-list-item:hover {
+  @apply border-blue-400 bg-[#f4f4f4];
+}
+
+.docs-contents-detailed-list-header {
+  @apply flex flex-row justify-between;
+}
+
+.docs-contents-detailed-list-header p {
+  @apply text-xl;
+  font-family: Roboto Mono, Source Code Pro, Consolas, monospace;
+}
+
+warn {
+  @apply text-red-500 block bg-gray-100 border-2 border-red-400 p-2 my-2 rounded-md
+}
